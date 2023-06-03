@@ -136,6 +136,13 @@ argument_specs:
         elements: "str"
         default:
           - "prometheus/rules/*.rules"
+      prometheus_service_state:
+        description: "Sets the desired state of the systemd service on this play run"
+        default: "started"
+      prometheus_service_enabled:
+        description: "Controls if the systemd service is enabled or not"
+        type: bool
+        default: false
       prometheus_static_targets_files:
         description:
           - "List of folders where ansible will look for files containing custom static target configuration files which will be copied to C({{ prometheus_config_dir }}/file_sd/)."
