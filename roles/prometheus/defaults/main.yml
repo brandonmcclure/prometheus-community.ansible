@@ -94,6 +94,8 @@ prometheus_static_targets_files:
   - prometheus/targets/*.yml
   - prometheus/targets/*.json
 
+prometheus_service_state: started
+prometheus_service_enabled: true
 # yamllint disable rule:line-length
 prometheus_alert_rules:  # noqa yaml[line-length]  # noqa line-length
   - alert: Watchdog
