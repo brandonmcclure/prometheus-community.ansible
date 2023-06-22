@@ -30,6 +30,9 @@ ExecStart={{ node_exporter_binary_install_dir }}/node_exporter \
     '--web.config=/etc/node_exporter/config.yaml' \
     {% endif %}
 {% endif %}
+{% if node_exporter_collector_systemd_unit_include|length -%}
+    '--collector.systemd.unit-include={{node_exporter_collector_systemd_unit_include}}' \
+{%   endif -%}
     '--web.listen-address={{ node_exporter_web_listen_address }}' \
     '--web.telemetry-path={{ node_exporter_web_telemetry_path }}'
 

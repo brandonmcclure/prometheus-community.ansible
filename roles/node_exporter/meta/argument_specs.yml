@@ -81,3 +81,8 @@ argument_specs:
           - "I(Advanced)"
           - "Node exporter user"
         default: "node-exp"
+      node_exporter_collector_systemd_unit_include:
+        description:
+          - "I(Advanced)"
+          - "A list of systemd units to explicitly allow"
+        default: ""
